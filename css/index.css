@@ -147,7 +147,7 @@ header {
   display: flex;
   flex-direction: row-reverse;
   margin: 4% 0;
-  background: aqua;
+  background: #99AFF8;
   padding: 5%;
   justify-content: space-between;
   border-radius: 10px;
@@ -209,4 +209,24 @@ header .my-info {
 header .my-info h3 {
   text-align: center;
   font-size: 2rem;
+}
+.section-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  line-height: 2;
+  border-bottom: 2px solid lightgrey;
+}
+@media (max-width: 800px) {
+  .section-table .length {
+    display: none;
+  }
+}
+.section-table th {
+  background: #99AFF8;
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+}
+.section-table td {
+  border-bottom: 1px solid lightgrey;
 }

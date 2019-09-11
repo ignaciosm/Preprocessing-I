@@ -4,7 +4,7 @@
    License: none (public domain)
 */
 
-@main-color: aqua;
+@main-color: #99AFF8;
 @secondary-color: lightgrey;
 
 
@@ -153,3 +153,30 @@ header {
 		}
 	}	
 }
+
+// Section: Education
+
+.section-table {
+    width: 100%;
+    margin-bottom: 1rem;
+	color: #212529;
+	line-height: 2;
+	border-bottom: 2px solid @secondary-color;
+
+	@media (max-width: 800px) {
+		.length {
+			display: none;
+		}
+	}
+	
+	th {
+		background: @main-color;
+		border-top: 2px solid @secondary-color;
+		border-bottom: 2px solid @secondary-color;
+	}
+
+	td {
+		border-bottom: 1px solid @secondary-color;
+	}
+}
+
