@@ -14,14 +14,23 @@
 </head>
 
 <body>
+  <div class="nav-container">
+    <nav class='sidenav'>
+      <a href="#contact" class="contact">Contact</a>
+      <a href="#skills" class="contact">Skills</a>
+      <a href="#education" class="contact">Education</a>
+      <a href="#work" class="contact">Work</a>
+    </nav>
+  </div>
   <header>
+
     <img src="images/me-and-potato.jpg" alt="Me and Señorita Potato" class="profile-pic">
     <div class="info-container">
       <h1>Ignacio San Martin</h1>
       <div class='subcontainer'>
-        <h2 class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum accusantium porro, corporis cum laudantium ipsum, fugit atque, minima impedit id assumenda. Adipisci distinctio iure deleniti assumenda sapiente autem deserunt eius?</h2>
+        <h4 class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum accusantium porro, corporis cum laudantium ipsum, fugit atque, minima impedit id assumenda. Adipisci distinctio iure deleniti assumenda sapiente autem deserunt eius?</h4>
         <div class="my-info">
-          <h3 class="contact-me">Contact Me:</h3>
+          <h3 id="contact">Contact Me:</h3><br>
           <a href="" class="linkedin">LinkedIn</a>
           <a href="https://github.com/ignaciosm" class="github">Github</a>
           <a href="" class="callme">+51 993575330</a>
@@ -31,9 +40,39 @@
     </div>
   </header>
 
-  <section class="personal"></section>
+  <section id="skills">
+      <h2 class="title">Skills:</h2>
+      <table class="section-table">
+          <tr>
+            <th>Skill</th>
+            <th>Level</th>
+            <th class="length">Category</th>
+          </tr>
+          <tr>
+            <td>HTML & CSS</td>
+            <td>Intermediate</td>
+            <td class="length">Coding</td>
+          </tr>
+          <tr>
+            <td>Javascript</td>
+            <td>Soon</td>
+            <td class="length">Coding</td>
+          </tr>
+          <tr>
+              <td>Ruby on Rails</td>
+              <td>Beginer</td>
+              <td class="length">Coding</td>
+            </tr>          
+          <tr>
+              <td>Financial Modeling</td>
+              <td>Advanced</td>
+              <td class="length">Finance</td>
+            </tr>    
+        </table>
+  </section>
 
-  <section class="education"></section>
+  <section id="education"></section>
+    <h2 class="title">Education:</h2>
     <table class="section-table">
       <tr>
         <th>School</th>
@@ -56,7 +95,8 @@
           <td class="length">5 years - Full Time</td>
         </tr>    
     </table>
-  <section class="work">
+  <section id="work">
+      <h2 class="title">Work Experience:</h2>
       <table class="section-table">
           <tr>
             <th>Job</th>

@@ -2,6 +2,20 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v7/L0x5DF4xlVMF-BfR8bXMIjhLq3o.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -138,18 +152,37 @@ html {
 }
 body {
   font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
 }
 html,
 body {
   height: 100%;
 }
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1000;
+  left: 3%;
+  line-height: 3;
+}
+@media (max-width: 1000px) {
+  .sidenav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: static;
+  }
+}
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row-reverse;
   margin: 4% 0;
   background: #99AFF8;
-  padding: 5%;
-  justify-content: space-between;
+  padding: 3%;
   border-radius: 10px;
   border: 1px solid lightgrey;
 }
@@ -165,6 +198,7 @@ header h1 {
   font-size: 5rem;
   font-weight: 400;
   margin-bottom: 4%;
+  font-family: 'Roboto Mono', monospace;
 }
 header .profile-pic {
   width: 30%;
@@ -179,6 +213,8 @@ header .profile-pic {
 }
 header .info-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   width: 68%;
 }
@@ -193,11 +229,14 @@ header .info-container .subcontainer {
   align-items: center;
   margin-bottom: 5%;
 }
-header .info-container .subcontainer h2 {
+header .info-container .subcontainer .about {
   width: 59%;
+  padding: 0 1%;
 }
 header .my-info {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-end;
   padding: 5%;
@@ -206,9 +245,18 @@ header .my-info {
   border-radius: 10px;
   width: 39%;
 }
-header .my-info h3 {
+header .my-info #contact-me {
   text-align: center;
   font-size: 2rem;
+}
+section {
+  margin: 3% 0;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  padding-bottom: 1%;
+  font-family: 'Roboto Mono', monospace;
 }
 .section-table {
   width: 100%;

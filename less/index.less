@@ -4,10 +4,16 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Mono&display=swap');
 @main-color: #99AFF8;
 @secondary-color: lightgrey;
+@heading-font: 'Roboto Mono', monospace;
 
-
+.my-flex(){
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -68,6 +74,7 @@ html {
 
 body {
 	font-size: 1.6rem;
+	font-family: 'Lato', sans-serif;
 }
 
 html, body {
@@ -77,13 +84,27 @@ html, body {
 
 // Ignacio's Styling
 
-header {
+.sidenav {
 	display: flex;
+	flex-direction: column;
+	position: fixed;
+	z-index: 1000;
+	left: 3%;
+	line-height: 3;
+
+	@media (max-width: 1000px) {
+		.my-flex();
+		flex-direction: row;
+		position: static;
+	}
+}
+
+header {
+	.my-flex();
 	flex-direction: row-reverse;
 	margin: 4% 0; 
 	background: @main-color;
-	padding: 5%;
-	justify-content: space-between;
+	padding: 3%;
 	border-radius: 10px;
 	border: 1px solid @secondary-color;
 	
@@ -98,6 +119,7 @@ header {
 		font-size: 5rem;
 		font-weight: 400;
 		margin-bottom: 4%;
+		font-family: @heading-font;
 
 	}
 
@@ -114,7 +136,7 @@ header {
 	}
 
 	.info-container {
-		display: flex;
+		.my-flex();
 		flex-direction: column;
 		width: 68%;
 
@@ -123,20 +145,19 @@ header {
 		}		
 	
 		.subcontainer {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			.my-flex();
 			margin-bottom: 5%;
 
-			h2 {
+			.about {
 				width: 59%;
+				padding: 0 1%;
 			}
 
 		}
 	}
 
 	.my-info {
-		display: flex;
+		.my-flex();
 		flex-direction: column;
 		justify-content: flex-end;
 		padding: 5%;
@@ -146,7 +167,7 @@ header {
 		border-radius: 10px;
 		width: 39%;
 
-		h3 {
+		#contact-me {
 			text-align: center;
 			font-size:	2rem;
 		
@@ -155,6 +176,17 @@ header {
 }
 
 // Section: Education
+
+section {
+	margin: 3% 0;
+}
+
+.title {
+	font-size: 3rem;
+	font-weight: 400;
+	padding-bottom: 1%;
+	font-family: @heading-font;
+}
 
 .section-table {
     width: 100%;
